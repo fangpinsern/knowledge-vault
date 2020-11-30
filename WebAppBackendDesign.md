@@ -55,7 +55,7 @@ These 4 calls are sufficient to do almost anything. To build fast, build these 4
 
 Always have a good folder structures. Having a messy and un-organised file structure can hamper your development when your projects get bigger.
 
-For example, when the application gets bigger, you are bound to have more and more controllers. Imagine looking throught 20 controllers at the side of your IDE. You might say "Just use the search". But are you gonna really remember the names of all 20 controllers?
+For example, when the application gets bigger, you are bound to have more and more controllers. Imagine looking throught 20 controllers at the side of your IDE. You might say "Just use the search". But are you gonna really remember the names of all 20 controllers? Cou can try to group the folders together to clean it up.
 
 Therefore, you should have a good folder structure. Every file and folder should be there for a reason. If they have no purpose, remove them.
 
