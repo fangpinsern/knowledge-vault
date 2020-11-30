@@ -27,11 +27,11 @@ Student
 Class
 
 Services:  
-getStudents  
-getClasses
+getStudents - purpose is to get students information from the database  
+getClasses - purpose is to get class information from the database
 
 Controllers:  
-checkIfStudentInValidClass
+checkIfStudentInValidClass - using the services, you can get the class information to cross check if the student is in a valid
 
 As you can see, services only deal with a single data type. If the "getStudents" service were to have checked if the student was in a valid class, the service might be unusable to other controllers. Hence you will spend more time creating new services to suite the need of the controller.
 
@@ -49,10 +49,28 @@ UPDATE - updates data
 
 DELETE - delete data
 
-These 4 calls are sufficient to do almost anything.
+These 4 calls are sufficient to do almost anything. To build fast, build these 4 services. Afterwards, look how to optimize the APIs and bundle common API requests into 1 response. This will help you see what you need instead of building out things that you think you need but end up not needing wasting valuable time.
 
 ## File Structures
 
-Always have a good folder structures. Having a messy and un organised file structure can hamper your development when your projects get bigger. For example, when the application gets bigger, you are bound to have more and more controllers. Imagine looking throught 20 controllers at the side of your IDE. You might say "Just use the search". But are you gonna really remember the names of all 20 controllers?
+Always have a good folder structures. Having a messy and un-organised file structure can hamper your development when your projects get bigger.
+
+For example, when the application gets bigger, you are bound to have more and more controllers. Imagine looking throught 20 controllers at the side of your IDE. You might say "Just use the search". But are you gonna really remember the names of all 20 controllers?
 
 Therefore, you should have a good folder structure. Every file and folder should be there for a reason. If they have no purpose, remove them.
+
+Recommended File Structure:  
+.  
+|-- src/  
+|&emsp;&emsp;|-- controllers/  
+|&emsp;&emsp;|&emsp;&emsp;|-- individual controllers  
+|&emsp;&emsp;|-- services/  
+|&emsp;&emsp;|&emsp;&emsp;|-- individual services  
+|&emsp;&emsp;|-- routes/  
+|&emsp;&emsp;|&emsp;&emsp;|-- route files  
+|&emsp;&emsp;|-- models/  
+|&emsp;&emsp;|&emsp;&emsp;|-- database models files  
+|-- index.js  
+|-- README.md  
+|-- .gitignore  
+|-- package.json
